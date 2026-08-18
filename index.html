@@ -248,6 +248,7 @@
 
   <script>
     const ENDPOINT = 'https://script.google.com/macros/s/AKfycbzWtx7swRKDzWt1ZPn984Vdc-vcu_l-1FOhTq59nMqTY0oC5moF4Fj_BVf6CxD9d4_n3A/exec';
+    const BOOKING_URL = 'https://corvee.chilipiper.com/me/weston-deering/instead-agents';
     const form = document.getElementById('lead-form');
     const button = document.getElementById('submit-button');
     const status = document.getElementById('status');
@@ -258,7 +259,7 @@
       if (!form.reportValidity()) return;
 
       button.disabled = true;
-      button.textContent = 'Saving...';
+      button.textContent = 'Connecting...';
       status.textContent = '';
 
       const payload = {
@@ -278,10 +279,9 @@
           body: JSON.stringify(payload)
         });
 
-        status.textContent = 'Got it — your info is saved.';
+        status.textContent = 'Got it — taking you to booking now.';
         booking.classList.add('visible');
-        button.textContent = 'Connected';
-        form.querySelectorAll('input').forEach(input => input.disabled = true);
+        window.location.assign(BOOKING_URL);
       } catch (error) {
         status.textContent = 'Something went wrong. You can still book below or contact me directly.';
         booking.classList.add('visible');
