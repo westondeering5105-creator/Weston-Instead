@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Sylfrena Private Runtime — Weston's private, single-user operating assistant.">
+  <meta name="theme-color" content="#07111f">
+  <title>Sylfrena Private Runtime</title>
+  <style>
+    :root{color-scheme:dark;--bg:#07111f;--panel:#0d1b2d;--text:#edf6ff;--muted:#a8bfd3;--blue:#62c8ff;--line:#22364b}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0,#12385b 0,transparent 36%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+    main{width:min(760px,calc(100% - 40px));margin:0 auto;padding:72px 0}
+    .eyebrow{color:var(--blue);font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+    h1{margin:.3rem 0 1rem;font-size:clamp(2.5rem,8vw,5rem);line-height:.98;letter-spacing:-.055em}
+    .lead{max-width:660px;color:var(--muted);font-size:1.18rem}
+    section{margin-top:48px;padding:28px;border:1px solid var(--line);border-radius:20px;background:rgba(13,27,45,.78)}
+    h2{margin-top:0;font-size:1.25rem}a{color:var(--blue)}
+    footer{margin-top:44px;color:var(--muted);font-size:.92rem;display:flex;gap:20px;flex-wrap:wrap}
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">Private single-user application</div>
+    <h1>Sylfrena</h1>
+    <p class="lead">Sylfrena Private Runtime is a personal operating assistant built exclusively for Weston Deering. It supports private conversation continuity, careful planning, and explicitly authorized creation of private Google Drive outputs.</p>
+    <section>
+      <h2>How Google Drive access is used</h2>
+      <p>Sylfrena requests the narrow <code>drive.file</code> permission. This allows the application to create and manage only the Google Drive files it creates or files the user explicitly authorizes for the application. It does not request unrestricted access to the user's entire Drive.</p>
+      <p>Google Drive access is used only to produce private, user-requested documents and preserve bounded personal-assistant outputs. Sylfrena does not independently publish, share, sell, or advertise with Google user data.</p>
+    </section>
+    <section>
+      <h2>Private by design</h2>
+      <p>This application is not a public product and is not offered to unknown users. Consequential external actions require explicit authorization, and Google access can be revoked by the account owner at any time.</p>
+    </section>
+    <footer>
+      <a href="./privacy.html">Privacy Policy</a>
+      <a href="./terms.html">Terms of Service</a>
+      <span>Last updated September 2, 2026</span>
+    </footer>
+  </main>
+</body>
+</html>
