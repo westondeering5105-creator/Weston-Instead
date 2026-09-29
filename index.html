@@ -59,10 +59,25 @@
     .event-tag strong { color:var(--ink); font-weight:760; letter-spacing:-.01em; }
     .event-tag .dot { width:6px; height:6px; border-radius:50%; background:var(--lime); }
     .hero { margin-top:clamp(48px,10vh,88px); }
+    .hero-intro {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+    .hero-intro .identity { min-width:0; }
+    .headshot {
+      width:clamp(112px,28vw,176px);
+      aspect-ratio:1;
+      flex:none;
+      display:block;
+      object-fit:cover;
+      border-radius:18px;
+    }
     h1 {
       margin:0;
       max-width:560px;
-      font-size:clamp(54px,14vw,88px);
+      font-size:clamp(42px,11vw,88px);
       line-height:.89;
       letter-spacing:-.065em;
       font-weight:630;
@@ -226,8 +241,13 @@
     </div>
 
     <section class="hero">
-      <h1>Weston<br>Deering</h1>
-      <p class="role">Account Executive / Orchestrator</p>
+      <div class="hero-intro">
+        <div class="identity">
+          <h1>Weston<br>Deering</h1>
+          <p class="role">Account Executive / Orchestrator</p>
+        </div>
+        <img class="headshot" src="weston-slack.png" alt="Weston Deering wearing an Instead shirt" width="488" height="488" />
+      </div>
 
       <div class="contact" aria-label="Contact information">
         <a href="mailto:Weston@instead.com">
