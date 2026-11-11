@@ -74,6 +74,9 @@
       line-height:1.35;
       letter-spacing:-.02em;
     }
+    .event-note { margin-top:28px; padding:18px 20px; border:1px solid var(--line); border-radius:16px; background:rgba(255,255,255,.55); } 
+    .event-note .eyebrow { margin:0 0 8px; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:var(--soft); }
+    .event-note p:last-child { margin:0; font-size:15px; line-height:1.5; }
     .contact {
       margin-top:44px;
       border-top:1px solid var(--line);
@@ -230,6 +233,8 @@
         <img class="headshot" src="weston-headshot-office.webp" alt="Weston Deering smiling in a black Instead shirt" width="1254" height="1254" />
       </div>
 
+      <aside class="event-note" aria-label="Current event"><p class="eyebrow">San Antonio · November 10–11, 2026</p><p><strong>Connecting at the AI Native Exchange?</strong> I’m here with Instead, exploring what AI-native accounting firms can build next. Leave your details below or book a conversation to keep in touch.</p></aside>
+
       <div class="contact" aria-label="Contact information">
         <a href="mailto:Weston@instead.com">
           <span class="label">Email</span>
@@ -311,7 +316,7 @@
         email: document.getElementById('email').value.trim(),
         firm: document.getElementById('firm').value.trim(),
         phone: document.getElementById('phone').value.trim(),
-        source: 'Weston Deering landing page',
+        source: 'Weston Deering landing page | AI Native Exchange 2026 | event/tradeshow/aina-instead',
         notes: ''
       };
 
